@@ -18,12 +18,21 @@ class SurveyController extends Controller
     }
 
 
-    public function index($name){
+
+    public function index(){
         $surveys = Survey::all();
+
         return view('home/index', ['surveys' => $surveys]);
     }
 
     public function create(Request $request){
+        $survey = new Survey();
+
+        $survey->surv_name = $request->input('surv_name');
+        $survey->surv_clie = $request->input('surv_clie');
+
+
+
 
     }
 

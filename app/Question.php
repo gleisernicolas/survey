@@ -4,16 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Survey extends Model
+class Question extends Model
 {
-
-    public function questions()
+    public function survey()
     {
-        return $this->hasMany('App\Question','ques_surv');
+        return $this->belongsTo('App\Survey');
     }
 
     protected $fillable = [
-        'surv_name', 'surv_clie',
+        'ques_body', 'ques_surv','ques_type',
     ];
 
     /**

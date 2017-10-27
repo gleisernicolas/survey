@@ -19,5 +19,5 @@ $router->get('/', function () use ($router) {
 $router->get('/api/survey/{name}',['as' => 'survey', 'uses' => 'SurveyController@create']);
 
 $router->group(['prefix' => 'api/v1'], function() use($router){
-    $router->get('/survey}', ['as' => 'api' , 'uses' => 'SurveyController@index']);
+    $router->get('/survey', ['as' => 'api' , 'uses' => 'SurveyController@index']);
 });

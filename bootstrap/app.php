@@ -83,6 +83,14 @@ $app->singleton(
 // $app->register(App\Providers\EventServiceProvider::class);
 
 /*
+ *
+ * Used to list all the registred routes for debug
+ * Documentation  : https://github.com/appzcoder/lumen-route-list
+*/
+$app->register(Appzcoder\LumenRoutesList\RoutesCommandServiceProvider::class);
+
+
+/*
 |--------------------------------------------------------------------------
 | Load The Application Routes
 |--------------------------------------------------------------------------
